@@ -10,14 +10,13 @@ button.addEventListener('click', function(){
   
 });
 
+const bomberandom = random();
+console.log(bomberandom);
+
 function creaQuadrato(){
 
-  const bomberandom = random();
-  console.log(bomberandom);
+ 
   for(let i=1; i <= 100; i++){
-
-    
-    
 
     const square = document.createElement('div');
     square.className ='square';
@@ -34,18 +33,24 @@ function creaQuadrato(){
         this.classList.toggle('clicked');
 
       }
-
-
-      //forse da cambiare il add
       console.log(square._squareID);
-      
-
-      
     });
     container.append(square);
 
   }
 
+
+}
+
+function mostraBombe(){
+
+  for(let i = 1; i<= 100;i++){
+
+    let verifica = document.getElementsByClassName('bombe');
+
+    
+
+  }
 }
 
 
