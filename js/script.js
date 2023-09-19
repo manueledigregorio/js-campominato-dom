@@ -22,13 +22,14 @@ function creaQuadrato(){
     square.className ='square';
 
     square._squareID = i;
-    
+    square.addEventListener('click',funzioneDaRimuovere)
     square.addEventListener('click', function(){
 
       if(bomberandom.includes(i)){
 
         this.classList.add('bombe')
         console.log(this.classList.add('bombe'))
+        mostraBombe();
       }else{
         this.classList.toggle('clicked');
 
@@ -42,17 +43,22 @@ function creaQuadrato(){
 
 }
 
-function mostraBombe(){
 
-  for(let i = 1; i<= 100;i++){
-
-    let verifica = document.getElementsByClassName('bombe');
-
-    
-
-  }
+function funzioneDaRimuovere(){
+  this.removeEventListener('click',funzioneDaRimuovere)
 }
 
+
+function mostraBombe() {
+  const squares = document.getElementsByClassName('square');
+  for (let i = 0; i < squares.length; i++) {
+    if (bomberandom.includes(squares[i]._squareID)) {
+      squares[i].classList.add('bombe');
+    }
+  }
+  alert('Hai perso!');
+  fineDelGioco(false); // Passa 'false' per indicare che il giocatore ha perso
+}
 
 function random(){
 
