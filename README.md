@@ -10,4 +10,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 
 ### Procedimento 
-
+1. creare una funzione random 
+1. creare un'array vuoto dove inserire i numeri random 1 uno a 100
+1. creare un ciclo di numeri fino a 16, aggiungere il .push per inserire i numeriRandom all'interno dell array 
+1.
